@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "manage": "Manage",
+    "learning": "Learning",
+    "history": "History",
+    "profile": "Profile",
+    "logout": "Logout",
+    "signin": "Signin",
+    "signup": "Signup"
+  },
+  "learning": {
+    "gen_question": "Generate question",
+    "select_topic": "Select Topic",
+    "record": "Record",
+    "stop": "Stop",
+    "view_result": "View Result",
+    "result": "Result",
+    "process_answer": "Processing your answer...",
+    "score": "Score",
+    "feedback": "Feedback",
+    "sample_answer": "Sample Answer"
+  },
+  "history": {
+    "score": "Score",
+    "title": "Learning History",
+    "question": "Question",
+    "your_answer": "Your Answer",
+    "feedback": "Feedback"
+  },
+  "profile": {
+    "title": "Profile",
+    "language": "Language",
+    "update": "Update",
+    "updating": "Updating..."
+  },
+  "manage": {
+    "title": "Manage Topics and Questions",
+    "add_topic": "+ Add Topic",
+    "add_question": "+ Add Question",
+    "cancel": "Cancel",
+    "add_new_topic": "Add New Topic",
+    "edit_topic": "Edit Topic",
+    "topic": "Topic",
+    "description": "Description",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "question": "Question",
+    "add_new_question": "Add New Question",
+    "edit_question": "Edit Question"
+  }
+}

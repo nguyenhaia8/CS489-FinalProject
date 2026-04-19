@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "manage": "Quản lý",
+    "learning": "Học tập",
+    "history": "Lịch sử",
+    "profile": "Hồ sơ",
+    "logout": "Đăng xuất",
+    "signin": "Đăng nhập",
+    "signup": "Đăng ký"
+  },
+  "learning": {
+    "gen_question": "Tạo câu hỏi",
+    "select_topic": "Chọn chủ đề",
+    "record": "Ghi âm",
+    "stop": "Dừng lại",
+    "view_result": "Xem kết quả",
+    "result": "Kết quả",
+    "process_answer": "Đang xử lý câu trả lời của bạn...",
+    "score": "Điểm",
+    "feedback": "Phản hồi",
+    "sample_answer": "Câu trả lời mẫu"
+  },
+  "history": {
+    "score": "Điểm",
+    "title": "Lịch sử học tập",
+    "question": "Câu hỏi",
+    "your_answer": "Câu trả lời của bạn",
+    "feedback": "Phản hồi"
+  },
+  "profile": {
+    "title": "Hồ sơ",
+    "language": "Ngôn ngữ",
+    "update": "Cập nhật",
+    "updating": "Đang cập nhật..."
+  },
+  "manage": {
+    "title": "Quản lý Chủ đề và Câu hỏi",
+    "add_topic": "+ Thêm Chủ đề",
+    "add_question": "+ Thêm Câu hỏi",
+    "cancel": "Hủy",
+    "add_new_topic": "Thêm Chủ đề Mới",
+    "edit_topic": "Chỉnh sửa chủ đề",
+    "topic": "Chủ đề",
+    "description": "Mô tả",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "question": "Câu hỏi",
+    "add_new_question": "Thêm câu hỏi mới",
+    "edit_question": "Chỉnh sửa câu hỏi"
+  }
+}
