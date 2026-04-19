@@ -1,3 +1,3 @@
 export const environment = {
-  backend_URL: 'http://localhost:4000',
+  backend_URL: 'http://prepinterview.us-east-2.elasticbeanstalk.com',
 };
