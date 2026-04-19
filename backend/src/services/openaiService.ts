@@ -1,9 +1,20 @@
 import OpenAI from "openai";
 import { ENV } from "../config/env";
 
-const openai = new OpenAI({
-  apiKey: ENV.OPENAI_API_KEY,
-});
+let openai: OpenAI | undefined;
+
+function getOpenAI(): OpenAI {
+  if (!openai) {
+    const apiKey =
+      ENV.OPENAI_API_KEY ||
+      (process.env.NODE_ENV === "test" ? "sk-test-ci-placeholder-not-used" : undefined);
+    if (!apiKey) {
+      throw new Error("OPENAI_API_KEY is not set");
+    }
+    openai = new OpenAI({ apiKey });
+  }
+  return openai;
+}
 
 export interface AnswerEvaluation {
   score: number;
@@ -45,7 +56,7 @@ export const evaluateAnswer = async (
   Return ONLY valid JSON, no additional text.`;
 
   try {
-    const completion = await openai.chat.completions.create({
+    const completion = await getOpenAI().chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         { role: "system", content: systemPrompt },

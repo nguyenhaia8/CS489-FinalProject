@@ -11,6 +11,12 @@ on:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+      OPENAI_API_KEY: sk-ci-placeholder-not-used-in-tests
+      JWT_SECRET: jest-jwt-secret
+      JWT_REFRESH_SECRET: jest-refresh-secret
+      MONGOMS_DOWNLOAD_TIMEOUT: "120000"
     defaults:
       run:
         working-directory: backend

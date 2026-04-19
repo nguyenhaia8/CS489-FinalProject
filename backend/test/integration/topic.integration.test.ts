@@ -9,7 +9,7 @@ import { createTestApp } from "../helpers/mongoTestApp";
 
 describe("integration: /api/topic", () => {
   let app: Express;
-  let mongoServer: MongoMemoryServer;
+  let mongoServer: MongoMemoryServer | undefined;
   let adminToken: string;
   let userToken: string;
 
@@ -20,8 +20,8 @@ describe("integration: /api/topic", () => {
   });
 
   afterAll(async () => {
-    await mongoose.disconnect();
-    await mongoServer.stop();
+    await mongoose.disconnect().catch(() => undefined);
+    if (mongoServer) await mongoServer.stop();
   });
 
   afterEach(async () => {

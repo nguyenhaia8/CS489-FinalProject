@@ -6,7 +6,7 @@ import { createTestApp } from "../helpers/mongoTestApp";
 
 describe("integration: /api/auth", () => {
   let app: Express;
-  let mongoServer: MongoMemoryServer;
+  let mongoServer: MongoMemoryServer | undefined;
 
   beforeAll(async () => {
     const ctx = await createTestApp();
@@ -15,8 +15,8 @@ describe("integration: /api/auth", () => {
   });
 
   afterAll(async () => {
-    await mongoose.disconnect();
-    await mongoServer.stop();
+    await mongoose.disconnect().catch(() => undefined);
+    if (mongoServer) await mongoServer.stop();
   });
 
   afterEach(async () => {

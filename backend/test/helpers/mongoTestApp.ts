@@ -14,7 +14,10 @@ export async function createTestApp(): Promise<{
   process.env.MONGO_URI = mongoServer.getUri();
 
   const { app } = await import("../../src/app");
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 30_000,
+    connectTimeoutMS: 30_000,
+  });
 
   return { app, mongoServer };
 }
