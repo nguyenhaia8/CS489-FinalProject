@@ -16,7 +16,6 @@ Core value of the system:
 ## 2. Requirements - Use Cases
 
 ### 2.1 Actors
-- **Guest**: unauthenticated user.
 - **User**: authenticated learner.
 - **Admin**: content manager for topics/questions.
 - **OpenAI Service**: external AI service for answer evaluation.
